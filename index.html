@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2 X HAMZAH N</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Judul -->
+        <div class="judul">
+            <h2>KANBAN Assignment 2</h2>
+        </div>
+
+        <!-- Input tugas baru -->
+        <div class="buat">
+            <input type="text" name="tugas" id="tugas" placeholder="Masukkan tugas">
+            <button class="buat-button" onclick="tugas()">Buat</button>
+        </div>
+
+        <!-- Board section -->
+        <div class="baris">
+            <!-- Kolom List -->
+            <div class="kolom" id="list" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <span>List</span>
+                <p>Tugas belum dikerjakan</p>
+            </div>
+            <!-- Kolom Proses -->
+            <div class="kolom" id="proses" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <span>Proses</span>
+                <p>Tugas dalam proses</p>
+            </div>
+
+            <!-- Kolom Selesai -->
+            <div class="kolom" id="selesai" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <span>Selesai</span>
+                <p>Tugas telah selesai</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
